@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoTrace - Community-Driven Carbon Footprint & Waste Management Platform</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#impact">Impact</a></li>
+                <li><a href="#community">Community</a></li>
+                <li><a href="#dashboard">Dashboard</a></li>
+            </ul>
+            <div class="nav-logo-centered">
+                <div class="nav-logo">
+                    <i class="fas fa-leaf"></i>
+                    <span>EcoTrace</span>
+                </div>
+            </div>
+            <div class="nav-auth">
+                <button class="btn-secondary" onclick="showLogin()">Login</button>
+                <button class="btn-primary" onclick="showRegister()">Sign Up</button>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Transform Your Environmental Impact with <span class="highlight">EcoTrace</span></h1>
+                <p class="hero-description">Join the community-driven revolution in carbon footprint tracking and waste management. Make every action count towards a sustainable future.</p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">10K+</span>
+                        <span class="stat-label">Active Users</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Communities</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">30%</span>
+                        <span class="stat-label">Carbon Reduction</span>
+                    </div>
+                </div>
+                <div class="hero-actions">
+                    <button class="btn-primary btn-large" onclick="startTracking()">Start Tracking</button>
+                    <button class="btn-secondary btn-large" onclick="watchDemo()">
+                        <i class="fas fa-play"></i> Watch Demo
+                    </button>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-image">
+                    <div class="floating-card carbon-card">
+                        <i class="fas fa-leaf"></i>
+                        <span>Carbon Saved: 25kg</span>
+                    </div>
+                    <div class="floating-card waste-card">
+                        <i class="fas fa-recycle"></i>
+                        <span>Waste Recycled: 15kg</span>
+                    </div>
+                    <div class="floating-card community-card">
+                        <i class="fas fa-users"></i>
+                        <span>Community Rank: #3</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Comprehensive Environmental Tracking</h2>
+                <p>Everything you need to monitor, reduce, and improve your environmental impact</p>
+            </div>
+            <div class="features-grid">
+                <!-- (Feature Cards Unchanged) -->
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3>Smart Carbon Calculator</h3>
+                    <p>AI-powered real-time tracking of transport, energy, and consumption data</p>
+                    <button class="feature-btn" onclick="openCarbonCalculator()">Try Calculator</button>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Waste Hotspot Mapping</h3>
+                    <p>GPS-based crowdsourced waste identification and reporting system</p>
+                    <button class="feature-btn" onclick="openWasteMap()">View Map</button>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>Green Challenge Hub</h3>
+                    <p>Community competitions with points, badges, and leaderboards</p>
+                    <button class="feature-btn" onclick="openChallenges()">Join Challenges</button>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <h3>Eco-Business Directory</h3>
+                    <p>Verified local green businesses with ratings and reviews</p>
+                    <button class="feature-btn" onclick="openDirectory()">Explore Businesses</button>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h3>AI Waste Classification</h3>
+                    <p>Photo-based waste type identification and sorting suggestions</p>
+                    <button class="feature-btn" onclick="openWasteClassifier()">Classify Waste</button>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-coins"></i>
+                    </div>
+                    <h3>Carbon Credit System</h3>
+                    <p>Blockchain-based community carbon credit tracking and rewards</p>
+                    <button class="feature-btn" onclick="openCarbonCredits()">View Credits</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section id="impact" class="impact">
+        <div class="container">
+            <div class="impact-content">
+                <div class="impact-text">
+                    <h2>Real Impact, Real Change</h2>
+                    <p>Our platform has already made significant environmental improvements across communities worldwide.</p>
+                    <div class="impact-metrics">
+                        <div class="metric">
+                            <span class="metric-value">2.5M kg</span>
+                            <span class="metric-label">CO₂ Reduced</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">180K kg</span>
+                            <span class="metric-label">Waste Recycled</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">850+</span>
+                            <span class="metric-label">Cleanup Events</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="impact-chart">
+                    <canvas id="impactChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Section -->
+    <section id="community" class="community">
+        <div class="container">
+            <h2>Join the Green Community</h2>
+            <div class="community-grid">
+                <div class="community-feed">
+                    <h3>Recent Achievements</h3>
+                    <div class="feed-item">
+                        <img src="https://www.shutterstock.com/image-photo/mad-scientist-got-great-idea-260nw-725950375.jpg" alt="User">
+                        <div class="feed-content">
+                            <p><strong>Shivraj  Ambore</strong> completed the "Zero Waste Week" challenge!</p>
+                            <span class="feed-time">2 hours ago</span>
+                        </div>
+                        <div class="feed-badge">🏆</div>
+                    </div>
+                    <div class="feed-item">
+                        <img src="https://c8.alamy.com/comp/K0Y879/crazy-chemist-with-test-tube-funny-scientist-K0Y879.jpg" alt="User">
+                        <div class="feed-content">
+                            <p><strong>Sargun singh Bhatia</strong> reported a waste hotspot and earned 50 points!</p>
+                            <span class="feed-time">4 hours ago</span>
+                        </div>
+                        <div class="feed-badge">🌱</div>
+                    </div>
+                    <div class="feed-item">
+                        <img src="data:image/jpeg;base64,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" alt="User">
+                        <div class="feed-content">
+                            <p><strong>Sachin Bodani </strong> reduced her carbon footprint by 40% this month!</p>
+                            <span class="feed-time">6 hours ago</span>
+                        </div>
+                        <div class="feed-badge">♻️</div>
+                    </div>
+                </div>
+                <div class="leaderboard">
+                    <h3>Community Leaderboard</h3>
+                    <div class="leaderboard-item">
+                        <span class="rank">#1</span>
+                        <span class="name">GreenWarriors</span>
+                        <span class="points">15,430 pts</span>
+                    </div>
+                    <div class="leaderboard-item">
+                        <span class="rank">#2</span>
+                        <span class="name">EcoFighters</span>
+                        <span class="points">12,890 pts</span>
+                    </div>
+                    <div class="leaderboard-item">
+                        <span class="rank">#3</span>
+                        <span class="name">SustainableSquad</span>
+                        <span class="points">11,750 pts</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard Section -->
+    <section id="dashboard" class="dashboard hidden">
+        <div class="container">
+            <div class="dashboard-header">
+                <h2>Your Environmental Dashboard</h2>
+                <div class="dashboard-user">
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40" alt="User" class="user-avatar">
+                    <span id="userName">John Doe</span>
+                </div>
+            </div>
+            <div class="dashboard-grid">
+                <div class="dashboard-card">
+                    <h3>Carbon Footprint</h3>
+                    <div class="carbon-display">
+                        <span class="carbon-value">125.6</span>
+                        <span class="carbon-unit">kg CO₂/month</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 65%"></div>
+                    </div>
+                    <p class="progress-text">35% below average</p>
+                </div>
+                <div class="dashboard-card">
+                    <h3>Waste Impact</h3>
+                    <div class="waste-stats">
+                        <div class="waste-item">
+                            <span class="waste-type">Recycled</span>
+                            <span class="waste-amount">45 kg</span>
+                        </div>
+                        <div class="waste-item">
+                            <span class="waste-type">Composted</span>
+                            <span class="waste-amount">12 kg</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="dashboard-card">
+                    <h3>Community Rank</h3>
+                    <div class="rank-display">
+                        <span class="rank-number">#7</span>
+                        <span class="rank-total">of 342</span>
+                    </div>
+                    <div class="points-display">
+                        <span class="points">8,450 points</span>
+                    </div>
+                </div>
+                <div class="dashboard-card">
+                    <h3>Active Challenges</h3>
+                    <div class="challenge-list">
+                        <div class="challenge-item">
+                            <span class="challenge-name">Plastic-Free Week</span>
+                            <div class="challenge-progress">
+                                <div class="challenge-bar" style="width: 60%"></div>
+                            </div>
+                        </div>
+                        <div class="challenge-item">
+                            <span class="challenge-name">Green Commute</span>
+                            <div class="challenge-progress">
+                                <div class="challenge-bar" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('loginModal')">&times;</span>
+            <div class="modal-header">
+                <h2>Welcome Back</h2>
+                <p>Sign in to continue your environmental journey</p>
+            </div>
+            <form class="auth-form" onsubmit="handleLogin(event)">
+                <div class="form-group">
+                    <label for="loginEmail">Email</label>
+                    <input type="email" id="loginEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" required>
+                </div>
+                <button type="submit" class="btn-primary btn-full">Sign In</button>
+                <div class="form-footer">
+                    <a href="#" onclick="showForgotPassword()">Forgot Password?</a>
+                    <span>Don't have an account? <a href="#" onclick="showRegister()">Sign up</a></span>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('registerModal')">&times;</span>
+            <div class="modal-header">
+                <h2>Join EcoTrace</h2>
+                <p>Start your sustainable journey today</p>
+            </div>
+            <form class="auth-form" onsubmit="handleRegister(event)">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="registerEmail">Email</label>
+                    <input type="email" id="registerEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerPassword">Password</label>
+                    <input type="password" id="registerPassword" required>
+                </div>
+                <div class="form-group">
+                    <label for="community">Community/Location</label>
+                    <select id="community" required>
+                        <option value="">Select your community</option>
+                        <option value="mumbai">Mumbai</option>
+                        <option value="delhi">Delhi</option>
+                        <option value="bangalore">Bangalore</option>
+                        <option value="pune">Pune</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-primary btn-full">Create Account</button>
+                <div class="form-footer">
+                    <span>Already have an account? <a href="#" onclick="showLogin()">Sign in</a></span>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Carbon Calculator Modal -->
+    <div id="carbonCalculatorModal" class="modal">
+        <div class="modal-content modal-large">
+            <span class="close" onclick="closeModal('carbonCalculatorModal')">&times;</span>
+            <div class="modal-header">
+                <h2>Smart Carbon Calculator</h2>
+                <p>Calculate your real-time carbon footprint</p>
+            </div>
+            <div class="calculator-tabs">
+                <button class="tab-btn active" onclick="switchTab('transport')">Transport</button>
+                <button class="tab-btn" onclick="switchTab('energy')">Energy</button>
+                <button class="tab-btn" onclick="switchTab('consumption')">Consumption</button>
+            </div>
+            <div class="calculator-content">
+                <div id="transport" class="tab-content active">
+                    <div class="form-group">
+                        <label>Transportation Mode</label>
+                        <select id="transportMode">
+                            <option value="car">Car</option>
+                            <option value="bus">Bus</option>
+                            <option value="train">Train</option>
+                            <option value="bike">Bike</option>
+                            <option value="walk">Walking</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Distance (km/week)</label>
+                        <input type="number" id="transportDistance" placeholder="Enter weekly distance">
+                    </div>
+                </div>
+                <div id="energy" class="tab-content">
+                    <div class="form-group">
+                        <label>Electricity Usage (kWh/month)</label>
+                        <input type="number" id="electricityUsage" placeholder="Enter monthly usage">
+                    </div>
+                    <div class="form-group">
+                        <label>Gas Usage (cubic meters/month)</label>
+                        <input type="number" id="gasUsage" placeholder="Enter monthly usage">
+                    </div>
+                </div>
+                <div id="consumption" class="tab-content">
+                    <div class="form-group">
+                        <label>Meat Consumption (meals/week)</label>
+                        <input type="number" id="meatConsumption" placeholder="Enter weekly meals">
+                    </div>
+                    <div class="form-group">
+                        <label>Shopping Frequency (times/month)</label>
+                        <input type="number" id="shoppingFreq" placeholder="Enter monthly frequency">
+                    </div>
+                </div>
+            </div>
+            <button class="btn-primary" onclick="calculateCarbon()">Calculate Carbon Footprint</button>
+            <div id="carbonResult" class="carbon-result hidden">
+                <h3>Your Carbon Footprint</h3>
+                <div class="result-value">
+                    <span id="carbonValue">0</span> kg CO₂/month
+                </div>
+                <div class="result-comparison">
+                    <span id="comparisonText">Loading comparison...</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Waste Map Modal -->
+    <div id="wasteMapModal" class="modal">
+        <div class="modal-content modal-large">
+            <span class="close" onclick="closeModal('wasteMapModal')">&times;</span>
+            <div class="modal-header">
+                <h2>Community Waste Map</h2>
+                <p>Report and track waste hotspots in your area</p>
+            </div>
+            <div class="map-container">
+                <div id="wasteMap" class="waste-map">
+                    <div class="map-placeholder">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Interactive waste map will load here</p>
+                        <button class="btn-primary" onclick="reportWaste()">Report Waste Hotspot</button>
+                    </div>
+                </div>
+                <div class="map-sidebar">
+                    <h3>Recent Reports</h3>
+                    <div class="waste-report">
+                        <div class="report-type plastic">Plastic</div>
+                        <div class="report-details">
+                            <p>Sector 18, Noida</p>
+                            <span>2 hours ago</span>
+                        </div>
+                    </div>
+                    <div class="waste-report">
+                        <div class="report-type organic">Organic</div>
+                        <div class="report-details">
+                            <p>MG Road, Bangalore</p>
+                            <span>4 hours ago</span>
+                        </div>
+                    </div>
+                    <div class="waste-report">
+                        <div class="report-type electronic">E-Waste</div>
+                        <div class="report-details">
+                            <p>Connaught Place, Delhi</p>
+                            <span>6 hours ago</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-leaf"></i>
+                        <span>EcoTrace</span>
+                    </div>
+                    <p>Transforming environmental responsibility through community-driven action and technology.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Features</h3>
+                    <ul>
+                        <li><a href="#features">Carbon Calculator</a></li>
+                        <li><a href="#features">Waste Mapping</a></li>
+                        <li><a href="#features">Green Challenges</a></li>
+                        <li><a href="#features">Eco Directory</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Community</h3>
+                    <ul>
+                        <li><a href="#community">Leaderboard</a></li>
+                        <li><a href="#community">Achievements</a></li>
+                        <li><a href="#community">Local Groups</a></li>
+                        <li><a href="#community">Events</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 EcoTrace. All rights reserved. Built for a sustainable future.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
